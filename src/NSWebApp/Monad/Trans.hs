@@ -3,8 +3,10 @@
 {-# LANGUAGE MultiParamTypeClasses      #-}
 {-# LANGUAGE StandaloneDeriving         #-}
 module NSWebApp.Monad.Trans
-    ( NSWebAppT(..)
-    , runNSWebAppT
+    (
+    -- * The NSWebAppT monad transformer
+    NSWebAppT(..),
+    runNSWebAppT
     ) where
 
 import           Control.Applicative       (Alternative)
@@ -16,6 +18,19 @@ import           Control.Monad.Log         (Handler, LoggingT (..),
 import           Control.Monad.Reader      (ReaderT (..))
 
 
+-- | A monad transformer that adds exceptions, read only state and logging to
+-- other monads.
+--
+-- @NSWebAppT@ construct a monad parameterized over four things:
+--
+-- *e -- The exception type.
+--
+-- *r -- The read only state type.
+--
+-- *message -- Log message type.
+--
+-- *m -- The inner monad.
+--
 newtype NSWebAppT e r message m a = NSWebAppT
     { unNSWebAppT :: ExceptT e (ReaderT r (LoggingT message m)) a
     } deriving (Functor,Applicative,Monad,Alternative,MonadIO,MonadError e)
@@ -31,6 +46,8 @@ instance Monad m => MonadLog message (NSWebAppT e r message m) where
                                      (\f ->
                                            (f m >>= return . Right))))))
 
+
+-- | Run execution within monad stack
 runNSWebAppT :: NSWebAppT e r message m a
              -> r
              -> Handler m message

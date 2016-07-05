@@ -2,24 +2,11 @@
 ./Setup.hs,15
 main main1,2
 
-./src/Main.hs,52
-module Main Main0,1
-main main2,3
-main main3,4
-
 ./src/NSWebApp/Monad/Trans.hs,278
 module NSWebApp.Monad.TransNSWebApp.Monad.Trans4,5
-newtype NSWebAppT NSWebAppT18,19
-newtype NSWebAppT e r message m a = NSWebAppTNSWebAppT18,19
-    { unNSWebAppT unNSWebAppT19,20
-instance instance22,23
-runNSWebAppT runNSWebAppT33,34
-runNSWebAppT runNSWebAppT37,38
-
-./src/NSWebApp/Monad.hs,98
-module NSWebApp.MonadNSWebApp.Monad1,2
-type NSWebAppIO NSWebAppIO8,9
-type NSWebAppIO e e8,9
-
-./src/NSWebApp.hs,30
-module NSWebApp NSWebApp1,2
+newtype NSWebAppT NSWebAppT33,34
+newtype NSWebAppT e r message m a = NSWebAppTNSWebAppT33,34
+    { unNSWebAppT unNSWebAppT34,35
+instance instance37,38
+runNSWebAppT runNSWebAppT50,51
+runNSWebAppT runNSWebAppT54,55

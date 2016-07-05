@@ -14,9 +14,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  other-modules:       NSWebApp.Monad
-                     , NSWebApp.Monad.Trans
-  exposed-modules:     NSWebApp
+  exposed-modules:     NSWebApp.Monad.Trans
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
                      , logging-effect
