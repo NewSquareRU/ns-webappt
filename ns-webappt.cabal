@@ -1,13 +1,13 @@
 name:                ns-webappt
-version:             0.1.0.0
-synopsis:            Simple project template from stack
+version:             0.2.0.0
+synopsis:            WebApp monad transformer
 description:         Please see README.md
-homepage:            https://github.com/githubuser/ns-webappt#readme
+homepage:            https://dpetrovmabius@bitbucket.org/cyl_analytics/ns-webappt.git#readme
 license:             BSD3
 license-file:        LICENSE
-author:              Author name here
-maintainer:          example@example.com
-copyright:           2016 Author name here
+author:              Author name dpetrov
+maintainer:          dpetrov@cyl.me
+copyright:           2016 Author name dpetrov
 category:            Web
 build-type:          Simple
 cabal-version:       >=1.10
