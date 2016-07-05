@@ -1,5 +1,5 @@
 name:                ns-webappt
-version:             0.2.0.0
+version:             0.2.0.1
 synopsis:            WebApp monad transformer
 description:         Please see README.md
 homepage:            https://dpetrovmabius@bitbucket.org/cyl_analytics/ns-webappt.git#readme
