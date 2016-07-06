@@ -10,6 +10,7 @@ module NSWebApp.Monad.Trans
     ) where
 
 import           Control.Applicative       (Alternative)
+import           Control.Monad.Catch       (MonadCatch, MonadThrow)
 import           Control.Monad.Error.Class (MonadError)
 import           Control.Monad.Except      (ExceptT (..), runExceptT)
 import           Control.Monad.IO.Class    (MonadIO)
@@ -33,7 +34,7 @@ import           Control.Monad.Reader      (MonadReader (..), ReaderT (..))
 --
 newtype NSWebAppT e r message m a = NSWebAppT
     { unNSWebAppT :: ExceptT e (ReaderT r (LoggingT message m)) a
-    } deriving (Functor,Applicative,Monad,Alternative,MonadIO,MonadError e, MonadReader r)
+    } deriving (Functor,Applicative,Monad,Alternative,MonadIO,MonadError e,MonadReader r,MonadThrow,MonadCatch)
 
 instance Monad m => MonadLog message (NSWebAppT e r message m) where
     logMessage m =

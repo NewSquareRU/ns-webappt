@@ -1,5 +1,5 @@
 name:                ns-webappt
-version:             0.2.0.1
+version:             0.2.1.1
 synopsis:            WebApp monad transformer
 description:         Please see README.md
 homepage:            https://dpetrovmabius@bitbucket.org/cyl_analytics/ns-webappt.git#readme
@@ -17,6 +17,7 @@ library
   exposed-modules:     NSWebApp.Monad.Trans
   default-language:    Haskell2010
   build-depends:       base >= 4.7 && < 5
+                     , exceptions
                      , logging-effect
                      , mtl
                      , transformers >= 0.4.2.0
