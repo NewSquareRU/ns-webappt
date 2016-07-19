@@ -5,7 +5,7 @@
 {-# LANGUAGE StandaloneDeriving         #-}
 {-# LANGUAGE TypeFamilies               #-}
 {-# LANGUAGE UndecidableInstances       #-}
-module NSWebApp.Monad.Trans
+module Control.Monad.Trans.NSWebApp
     (
     -- * The NSWebAppT monad transformer
     NSWebAppT(..),
