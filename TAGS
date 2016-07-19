@@ -3,10 +3,10 @@
 main main1,2
 
 ./src/NSWebApp/Monad/Trans.hs,278
-module NSWebApp.Monad.TransNSWebApp.Monad.Trans4,5
-newtype NSWebAppT NSWebAppT34,35
-newtype NSWebAppT e r message m a = NSWebAppTNSWebAppT34,35
-    { unNSWebAppT unNSWebAppT35,36
-instance instance38,39
-runNSWebAppT runNSWebAppT51,52
-runNSWebAppT runNSWebAppT55,56
+module NSWebApp.Monad.TransNSWebApp.Monad.Trans7,8
+newtype NSWebAppT NSWebAppT40,41
+newtype NSWebAppT e r message m a = NSWebAppTNSWebAppT40,41
+    { unNSWebAppT unNSWebAppT41,42
+instance instance44,45
+runNSWebAppT runNSWebAppT74,75
+runNSWebAppT runNSWebAppT78,79
