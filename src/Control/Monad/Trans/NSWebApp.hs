@@ -16,13 +16,13 @@ import           Control.Applicative         (Alternative)
 import           Control.Monad.Base          (MonadBase (..))
 import           Control.Monad.Catch         (MonadCatch, MonadThrow)
 import           Control.Monad.Error.Class   (MonadError)
-import           Control.Monad.Except        (ExceptT (..), runExceptT)
 import           Control.Monad.IO.Class      (MonadIO (..))
 import           Control.Monad.Log           (Handler, LoggingT (..),
                                               MonadLog (..), runLoggingT)
 import           Control.Monad.Reader        (MonadReader (..), ReaderT (..))
 import           Control.Monad.Trans         (MonadTrans (..))
 import           Control.Monad.Trans.Control (MonadBaseControl (..))
+import           Control.Monad.Trans.Except  (ExceptT (..), runExceptT)
 
 
 -- | A monad transformer that adds exceptions, read only state and logging to
